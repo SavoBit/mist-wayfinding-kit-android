@@ -40,15 +40,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void navigate() {
         // 2500 is used as random x,y coordinate, which is in pixels of map image used and then we are getting the nearest waypoint to draw the destination.
-        map.navigateSilentlyToDestination(map.getNearestWaypoint(new PointF(2500, 2500)), new NavigationUpdateCallback() {
-            @Override
-            public void navigatationUpdate(MSTArrivalResult mstArrivalResult) {
-                Log.i("Navigation Update", mstArrivalResult.toString());
-            }
-        });
+        if (map != null) {
+            map.navigateSilentlyToDestination(map.getNearestWaypoint(new PointF(2500, 2500)), new NavigationUpdateCallback() {
+                @Override
+                public void navigatationUpdate(MSTArrivalResult mstArrivalResult) {
+                    Log.i("Navigation Update", mstArrivalResult.toString());
+                }
+            });
+        }
     }
 
     private void stop() {
-        map.stopNavigation();
+        if (map != null) {
+            map.stopNavigation();
+        }
     }
 }
