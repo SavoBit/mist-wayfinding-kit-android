@@ -20,7 +20,9 @@
             android:id="@+id/navigate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="55dp"
+            android:layout_marginLeft="55dp"
+            android:layout_marginRight="55dp"
+            android:layout_marginBottom="55dp"
             android:layout_weight="1"
             android:text="Navigate" />
 
@@ -28,7 +30,9 @@
             android:id="@+id/stop"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="55dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="55dp"
+
             android:layout_weight="1"
             android:text="Stop" />
     </LinearLayout>
